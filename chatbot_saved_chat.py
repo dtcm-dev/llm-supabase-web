@@ -11,53 +11,17 @@ from Database import Database
 db = Database()
 
 def login(email: str, password: str):
-    try:
-        response = db.client.auth.sign_in_with_password({
-            "email": email,
-            "password": password
-        })
-        return response.user, None
-    except Exception as e:
-        return None, str(e)
+    ## implement this function
+    pass
+
 
 def signup(email: str, password: str):
-    try:
-        response = db.client.auth.sign_up({
-            "email": email,
-            "password": password
-        })
-        return response.user, None
-    except Exception as e:
-        return None, str(e)
+    ## implement this function
+    pass
 
 def authenticate():
-    while True:
-        print("\n=== Authentication ===")
-        choice = input("1. Login\n2. Sign up\n3. Exit\nChoose an option (1-3): ")
-        
-        if choice == "3":
-            print("Goodbye!")
-            sys.exit(0)
-            
-        email = input("Enter your email: ")
-        password = input("Enter your password: ")
-        
-        if choice == "1":
-            user, error = login(email, password)
-            if user:
-                print("Login successful!")
-                return user
-            print(f"Login failed: {error}")
-        
-        elif choice == "2":
-            user, error = signup(email, password)
-            if user:
-                print("Sign up successful! Please log in.")
-            else:
-                print(f"Sign up failed: {error}")
-        
-        else:
-            print("Invalid option. Please try again.")
+    ## implement this function
+    pass
 
 def get_cheapest_rooms():
     limit = 5
@@ -82,7 +46,7 @@ def save_chat_session(user_id: str, messages: list):
             "messages": json.dumps(serialized_messages),
             "created_at": datetime.now().isoformat()
         }).execute()
-        
+
         return response.data[0], None
     except Exception as e:
         return None, str(e)
