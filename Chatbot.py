@@ -3,7 +3,7 @@ import json
 from datetime import datetime
 from langchain_openai import ChatOpenAI
 from langchain_core.prompts import ChatPromptTemplate, MessagesPlaceholder
-from langchain_core.messages import HumanMessage, AIMessage, FunctionMessage, SystemMessage
+from langchain_core.messages import HumanMessage, AIMessage, FunctionMessage
 from typing import List, Dict, Any, Optional
 from config import FUNCTION_DEFINITIONS
 
