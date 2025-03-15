@@ -8,8 +8,8 @@ profiles = {
         },
         2: {
             "name": "Technical Support",
-            "model_name": "gpt-4-turbo",
-            "temperature": 0.5,
+            "model_name": "gpt-4o",
+            "temperature": 0.8,
             "personality": "You are a technical support specialist with deep knowledge of our products.",
             "system_prompt": "You are a technical support AI. {personality}"
         }
