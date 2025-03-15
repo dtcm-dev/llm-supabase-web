@@ -1,5 +1,5 @@
 from dotenv import load_dotenv, find_dotenv
-from supabase import create_client, Client
+from supabase import create_client
 import os
 import sys
 
